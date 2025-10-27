@@ -1,11 +1,19 @@
-import { A } from "@solidjs/router";
+import { useNavigate } from "@solidjs/router";
 import type { Game, Expansion } from "~/data/games";
+
+import { handleTransition } from "~/utils/handle-transition";
 
 interface ListItemProps {
   game: Game | Expansion;
 }
 
 export default function ListItem(props: ListItemProps) {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    handleTransition(() => navigate(`/game/${props.game.bggId}`), "forward");
+  };
+
   return (
     <li class="list-row">
       <div>
@@ -20,7 +28,7 @@ export default function ListItem(props: ListItemProps) {
           {props.game.played ? "Played" : "Unplayed"}
         </div>
       </div>
-      <A class="btn btn-square btn-ghost" href={`/game/${props.game.bggId}`}>
+      <button class="btn btn-square btn-ghost" onClick={handleNavigate}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -35,7 +43,7 @@ export default function ListItem(props: ListItemProps) {
             d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
           />
         </svg>
-      </A>
+      </button>
     </li>
   );
 }

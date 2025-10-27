@@ -1,22 +1,26 @@
 import { Switch, Match, createMemo } from "solid-js";
 import { useNavigate, useLocation, A } from "@solidjs/router";
 
+import { handleTransition } from "~/utils/handle-transition";
+
 export default function Nav() {
   const location = useLocation();
   const navigate = useNavigate();
 
   const currentPath = createMemo(() => location.pathname);
 
+  const handleNavigate = () => {
+    handleTransition(
+      () => (window.history.length > 1 ? navigate(-1) : navigate("/")),
+      "backward",
+    );
+  };
+
   return (
     <div class="navbar bg-base-100 shadow-sm fixed z-30">
       <Switch>
         <Match when={currentPath() != "/"}>
-          <button
-            class="btn btn-square btn-ghost"
-            onClick={() =>
-              window.history.length > 1 ? navigate(-1) : navigate("/")
-            }
-          >
+          <button class="btn btn-square btn-ghost" onClick={handleNavigate}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
