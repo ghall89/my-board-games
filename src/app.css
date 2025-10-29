@@ -2,53 +2,53 @@
 @plugin "daisyui";
 
 @keyframes slide-out {
-    from {
-        transform: translateX(0%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0%);
+	}
 }
 
 /* Forward animations */
 .forward::view-transition-old(root) {
-    animation: slide-out 0.4s ease-in-out;
+	animation: slide-out 0.4s ease-in-out;
 }
 .forward::view-transition-new(root) {
-    animation: slide-in 0.4s ease-in-out;
+	animation: slide-in 0.4s ease-in-out;
 }
 
 /* Reversed animations */
 .backward::view-transition-old(root) {
-    animation: slide-in 0.4s ease-in-out reverse;
+	animation: slide-in 0.4s ease-in-out reverse;
 }
 .backward::view-transition-new(root) {
-    animation: slide-out 0.4s ease-in-out reverse;
+	animation: slide-out 0.4s ease-in-out reverse;
 }
 
 @keyframes slide-out {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(0);
+	}
 }
