@@ -1,5 +1,5 @@
-import { Switch, Match, createMemo } from 'solid-js';
-import { useNavigate, useLocation, A } from '@solidjs/router';
+import { useLocation, useNavigate } from '@solidjs/router';
+import { createMemo, Match, Switch } from 'solid-js';
 
 import { handleTransition } from '~/utils/handle-transition';
 
@@ -19,8 +19,13 @@ export default function Nav() {
 	return (
 		<div class="navbar bg-base-100 shadow-sm fixed z-30">
 			<Switch>
-				<Match when={currentPath() != '/'}>
-					<button class="btn btn-square btn-ghost" onClick={handleNavigate}>
+				<Match when={currentPath() !== '/'}>
+					<button
+						aria-label="Back"
+						class="btn btn-square btn-ghost"
+						onClick={handleNavigate}
+						type="button"
+					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"

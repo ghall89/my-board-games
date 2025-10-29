@@ -1,10 +1,9 @@
 import { useParams } from '@solidjs/router';
-import { createResource, createMemo, Show, Switch, Match, For } from 'solid-js';
-
-import Layout from '~/layout';
+import { createMemo, createResource, For, Match, Show, Switch } from 'solid-js';
 import ListItem from '~/components/list-item';
-import { fetchGame } from '~/utils/fetch-game';
 import { games } from '~/data/games';
+import Layout from '~/layout';
+import { fetchGame } from '~/utils/fetch-game';
 
 export default function GamePage() {
 	const params = useParams();
@@ -21,6 +20,7 @@ export default function GamePage() {
 				<img
 					class="object-cover h-56 rounded-box"
 					src={`/assets/covers/${params.id}.jpg`}
+					alt=""
 				/>
 				<Show when={game.loading}>
 					<p>Loading...</p>

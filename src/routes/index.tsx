@@ -1,8 +1,7 @@
 import { For } from 'solid-js';
-
+import ListItem from '~/components/list-item';
 import { games } from '~/data/games';
 import Layout from '~/layout';
-import ListItem from '~/components/list-item';
 
 export default function Home() {
 	return (

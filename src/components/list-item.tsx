@@ -1,5 +1,5 @@
 import { useNavigate } from '@solidjs/router';
-import type { Game, Expansion } from '~/data/games';
+import type { Expansion, Game } from '~/data/games';
 
 import { handleTransition } from '~/utils/handle-transition';
 
@@ -20,6 +20,7 @@ export default function ListItem(props: ListItemProps) {
 				<img
 					class="size-10 object-cover rounded-box"
 					src={`/assets/covers/${props.game.bggId}.jpg`}
+					alt=""
 				/>
 			</div>
 			<div>
@@ -28,7 +29,12 @@ export default function ListItem(props: ListItemProps) {
 					{props.game.played ? 'Played' : 'Unplayed'}
 				</div>
 			</div>
-			<button class="btn btn-square btn-ghost" onClick={handleNavigate}>
+			<button
+				aria-label="Info"
+				class="btn btn-square btn-ghost"
+				onClick={handleNavigate}
+				type="button"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

@@ -1,5 +1,3 @@
-import { A } from '@solidjs/router';
-
 import Layout from '~/layout';
 
 export default function NotFound() {

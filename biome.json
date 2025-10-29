@@ -20,6 +20,14 @@
 	"linter": {
 		"domains": {
 			"solid": "recommended"
+		},
+		"rules": {
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			},
+			"correctness": {
+				"noUnknownTypeSelector": "off"
+			}
 		}
 	},
 	"javascript": {
