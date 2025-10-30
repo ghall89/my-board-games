@@ -8,5 +8,10 @@ export async function GET({ params }: APIEvent) {
 
 	const game = await bgg.thing(id);
 
-	return game;
+	return new Response(JSON.stringify(game), {
+		headers: {
+			'Cache-Control': 'public, max-age=3600',
+			'Content-Type': 'application/json',
+		},
+	});
 }

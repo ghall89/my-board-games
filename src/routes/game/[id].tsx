@@ -20,7 +20,7 @@ export default function GamePage() {
 					src={`/assets/covers/${params.id}.jpg`}
 					alt=""
 				/>
-				<Suspense>
+				<Suspense fallback={<div class="skeleton h-40 w-96"></div>}>
 					<GameInfo />
 				</Suspense>
 				<Show when={localData()?.expansions}>

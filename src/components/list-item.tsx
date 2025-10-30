@@ -16,7 +16,7 @@ export default function ListItem(props: ListItemProps) {
 
 	return (
 		<li class="list-row">
-			<div>
+			<div view-transition-name={`img-${props.game.bggId}`}>
 				<img
 					class="size-10 object-cover rounded-box"
 					src={`/assets/covers/${props.game.bggId}.jpg`}

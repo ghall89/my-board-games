@@ -17,7 +17,7 @@ export default function Nav() {
 	};
 
 	return (
-		<div class="navbar bg-base-100 shadow-sm fixed z-30">
+		<div class="navbar bg-base-100 shadow-sm fixed z-30 nav-container">
 			<Switch>
 				<Match when={currentPath() !== '/'}>
 					<button
