@@ -15,9 +15,22 @@ export default function GameInfo() {
 		return game;
 	});
 
+	const name = () => {
+		const name = game()?.name;
+		if (!name) {
+			return 'Error';
+		}
+
+		if (Array.isArray(name)) {
+			return name[0].value;
+		}
+
+		return name.value;
+	};
+
 	return (
 		<Show when={game()}>
-			<h2 class="text-3xl text-center font-bold">{game()?.name[0].value}</h2>
+			<h2 class="text-3xl text-center font-bold">{name()}</h2>
 			<div class="stats shadow">
 				<div class="stat">
 					<div class="stat-figure text-primary">

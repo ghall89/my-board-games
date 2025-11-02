@@ -131,7 +131,7 @@ export const games: Game[] = [
 		],
 		minPlayers: 2,
 		maxPlayers: 6,
-		estPlaytime: 0,
+		estPlaytime: 60,
 	},
 	{
 		title: 'Here to Slay',

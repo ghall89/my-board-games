@@ -13,7 +13,7 @@
 	"dependencies": {
 		"@solidjs/router": "^0.15.3",
 		"@solidjs/start": "^1.2.0",
-		"bgg-client": "^2.0.0",
+		"bgg-client": "^2.0.1",
 		"daisyui": "^5.3.10",
 		"solid-js": "^1.9.10",
 		"vinxi": "^0.5.8"

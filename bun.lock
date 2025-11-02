@@ -428,7 +428,7 @@
 
     "baseline-browser-mapping": ["baseline-browser-mapping@2.8.20", "", { "bin": { "baseline-browser-mapping": "dist/cli.js" } }, "sha512-JMWsdF+O8Orq3EMukbUN1QfbLK9mX2CkUmQBcW2T0s8OmdAUL5LLM/6wFwSrqXzlXB13yhyK9gTKS1rIizOduQ=="],
 
-    "bgg-client": ["bgg-client@2.0.0", "", { "dependencies": { "fast-xml-parser": "^5.2.5", "try-catcher-ts": "^0.1.1" } }, "sha512-Z7lgAH5M/3U0BoM6G+oEfUJpJCRSvMntkLq7tQBtam1TXDTp1pCedjyp12t4xCAnRrbWhklwj+e11W6ulUcGkQ=="],
+    "bgg-client": ["bgg-client@2.0.1", "", { "dependencies": { "fast-xml-parser": "^5.2.5", "try-catcher-ts": "^0.1.1" } }, "sha512-gv3rUOfFRWEmtdLbiue7gPZcfAk/WCD20PZefwyGfRyok03zSG5cHdHO3pTyD6I7P12k35RvWGe8fWXcNMcq1Q=="],
 
     "bindings": ["bindings@1.5.0", "", { "dependencies": { "file-uri-to-path": "1.0.0" } }, "sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ=="],
 

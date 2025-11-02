@@ -1,7 +1,7 @@
 import { useNavigate } from '@solidjs/router';
 import type { Expansion, Game } from '~/data/games';
-
 import { handleTransition } from '~/utils/handle-transition';
+import Thumbnail from './thumbnail';
 
 interface ListItemProps {
 	game: Game | Expansion;
@@ -16,13 +16,8 @@ export default function ListItem(props: ListItemProps) {
 
 	return (
 		<li class="list-row">
-			<div view-transition-name={`img-${props.game.bggId}`}>
-				<img
-					class="size-10 object-cover rounded-box"
-					src={`/assets/covers/${props.game.bggId}.jpg`}
-					alt=""
-				/>
-			</div>
+			<Thumbnail src={`/assets/covers/${props.game.bggId}.jpg`} alt="" />
+
 			<div>
 				<div>{props.game.title}</div>
 				<div class="text-xs uppercase font-semibold opacity-60">
